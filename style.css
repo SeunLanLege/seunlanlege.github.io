@@ -1,9 +1,27 @@
 h1{
-	color:#fff !important;
+	font-size: 50px !important;
 }
 .lol {
 	height: 100%;
 	width: 100%;
+}
+.margin-left{
+	margin-left: 70px;
+	background:#34495E !important;
+	color: white;
+	width: 150px;
+	height: 60px;
+	color:#fff;
+	border-radius: 7px;
+}
+.margin-right {
+	margin-right:70px;
+	background:#0de5ab !important;
+	color: #fff;
+	width: 150px;
+	height: 60px;
+	color:#fff;
+	border-radius: 7px;
 }
 .jumbotron {
 padding:0px;
@@ -19,6 +37,21 @@ background: -webkit-linear-gradient(225deg,rgba(57,141,121,1),rgba(511141,1570.7
 }
 .background{
 background: url('x.jpg');
+}
+div.flex-mex{
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+-webkit-box-align: center;
+align-items: center;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+    height: 80% !important;
 }
 div.flex-me{
     display: -ms-flexbox;
@@ -67,10 +100,13 @@ padding: 20px 10px;
 input[type="password"] {
 border-top: 1.5px solid #dedede;
 }
-
+.row > [class*='col-'] {
+	padding-right:0;
+    padding-left:0;
+}
 input[type="text"],input[type="password"]{
 	width: 90%;
-	height: 40px;
+	height: 60px;
 	font-size: 2rem;
 	padding: 0px 5px 0px 20px;
 	top: -10px;
@@ -84,6 +120,7 @@ input[type="submit"] {
 	color:#fff;
 border-bottom-left-radius:7px;
 border-bottom-right-radius: 7px;
+font-size: 2rem;
 }
 label {
 	font-size: 20px;
@@ -102,10 +139,8 @@ ul > li a {
 a {
 	color :#fff !important;
 }
-h1{
-	margin-top: -65px;
-	margin-bottom: 40px;
-	color: #fff;
+h1,h2,h3,h4,h5,h6 {
+color: #fff !important;
 	}
 	a:hover{
 	background: transparent !important;

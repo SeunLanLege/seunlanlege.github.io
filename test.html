@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="boot/css/bootstrap.min.css">
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="boot/js/bootstrap.min.js"></script>
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Contact Us</button>
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content text-center">
+      <div class="modal-body">
+      <input type="text" id="name" placeholder="Your Name"><br>
+      <input type="email" name="" id="email" placeholder="Your Email"><br>
+      <textarea id="message" placeholder="Your Message Here"></textarea><br>
+      <button onclick="sendmessage()">Submit</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Contact Us</button>
+<script type="text/javascript">
+  function sendmessage() {
+    var name = $('#name').val();
+    var email  = $('#email').val();
+    var message = $('#message').val();
+    if ($.trim(name)!== "" && $.trim(email) !== "" && $.trim(message) !== "") {
+      var reg=/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+  if (reg.test(email)){
+    $.ajax({
+   url: 'http://localhost/ft/mail.php',
+   type: 'post',
+   data:{name:name,email:email,message:message},
+   success:function (response) {
+    //$('.status').html('<div class="success bg-success"><h4>Sent!</h4></div>');
+    $('.status').html(response);
+   }
+  });
+  } else {
+    alert('Invalid Email');
+  }
+    } else {
+      alert('A required field is empty');
+    }
+  }
+</script>
+</body>
+</html>

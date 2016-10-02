@@ -18,11 +18,6 @@ if (i !== 1) {
 } else {
   i = 0;
 }
-setInterval(function () {
-d - 0.1;
-e - 0.14;
-$('.jumbotron').css({ 'background': 'linear-gradient(225deg, rgba(57,141,121,'+d+'), rgba(11,141,57,'+e+'))'});
-},100);
 },5000);
 },1000);
 });
