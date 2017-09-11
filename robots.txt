@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://seunlanlege.github.io/sitemap.xml
